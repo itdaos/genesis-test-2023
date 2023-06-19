@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import styles from "@/layout/create-card/create-card.module.scss";
-import { Button, Divider, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Radio, RadioGroup, Select, SelectChangeEvent, Stack, TextField } from '@mui/material';
+import { Button, Divider, IconButton, Stack } from '@mui/material';
 import { ReactComponent as IconFile } from '@/assets/icon-file.svg';
 import { ReactComponent as IconCross } from '@/assets/icon-cross.svg';
 import { ReactComponent as IconCard } from '@/assets/icon-card.svg';

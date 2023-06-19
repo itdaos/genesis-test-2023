@@ -1,5 +1,5 @@
 import { Bank, BusinessDivision, CardAccount, Currency, LegalEntity } from "@/types";
-import { Box, Button, Card, Divider, FormControl, FormControlLabel, Grid, InputAdornment, InputLabel, MenuItem, OutlinedInput, Radio, RadioGroup, Select, SelectChangeEvent, Stack, TextField } from "@mui/material";
+import { Box, Button, Card, Divider, FormControl, FormControlLabel, Grid, InputAdornment, InputLabel, MenuItem, OutlinedInput, Radio, RadioGroup, Select, SelectChangeEvent, Stack } from "@mui/material";
 import { ChangeEvent, ReactNode, useState } from "react";
 import { ReactComponent as IconInfo } from '@/assets/icon-info.svg';
 import { ReactComponent as IconPlus } from '@/assets/icon-plus.svg';
@@ -21,7 +21,7 @@ interface CreateCardFormState {
 }
 
 export default function CreateCardForm() {
-    const [formData, setFormData] = useState<CreateCardFormState>({
+    const [formData, _] = useState<CreateCardFormState>({
         accountType: "iban",
         cards: []
     })
@@ -165,8 +165,8 @@ export default function CreateCardForm() {
                             return <CreateCardNew key={_} {...{
                                 number: formData.cards[_]?.number,
                                 cardHolder: formData.cards[_]?.cardHolder,
-                                handleNumberChange: (e: ChangeEvent) => { return; },
-                                handleCardHolderChange: (e: ChangeEvent) => { return; }
+                                handleNumberChange: (_: ChangeEvent) => { return; },
+                                handleCardHolderChange: (_: ChangeEvent) => { return; }
                             }} />
                         })
                     }
